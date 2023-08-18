@@ -1,0 +1,310 @@
+
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Automated Prior Authorization</title>
+
+	<link rel='stylesheet' href='css/bootstrap.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+
+
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+
+	<style type="text/css" id="wp-custom-css">
+		.page-contact-us input.wpcf7-form-control.wpcf7-submit {
+			background: #ee5d3e;
+			border: 0;
+		}
+		.page-contact-us label {
+			width: 100%;
+		}
+
+		/* Roi Calculator page CSS */
+		.header--big--section.roi--calculator .wp-block-column.container .wp-block-columns {
+			display: flex;
+		}
+		.header--big--section.roi--calculator h1 {
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 36px;
+			font-weight: 900;
+			margin-bottom: 30px;
+		}
+		.roi--calculator .roi_calculation_form--main {
+			z-index: 99;
+		}
+		.header--big--section.roi--calculator .roi_calculation---main_form--main h1 {
+			color: #333f48;
+			font-size: 44px;
+		}
+		.edifecs--top--form.roi--calculator--form h3 {
+			font-size: 20px;
+			text-transform: none;
+			font-weight: 700;
+		}
+		.edifecs--top--form.roi--calculator--form {
+			padding-top: 0px;
+		}
+		.roi--calculator .roi_calculation_form--main p.claculate--another--para {
+			max-width: 100%;
+			margin-top: 15px;
+			font-style: italic;
+			font-weight: 500;
+			color: #333f48;
+		}
+		.wp-block-columns {
+			margin-bottom: 0;
+		}		
+	</style>
+</head>
+
+<body class="page-automated-prior-authorization">
+		
+
+			<div class="">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main">
+
+						<div class="wp-block-columns">
+							<div class="header--big--section roi--calculator">
+								<div class="wp-block-columns">
+									<div class="wp-block-column container">
+										<div class="wp-block-columns">
+											<div class="wp-block-column" style="flex-basis:50%">
+												<h1>How Much can you save with automated prior authorization?</h1>
+												<p>Prior authorizations are the largest administrative burden on providers and can result in delayed patient care, suboptimal health outcomes, and tension with contracted health plans. According to <a href="https://www.wedi.org/" style="color: #333f48;font-weight: bold;" target="_blank">WED Prior Authorization Council</a>, the yearly industry cost for prior authorization burden approaches close to $25B per year. Discover how much your organization can save on average by automating your prior authorizations.</p>
+												<div class="ediface--is--fully--automating">
+													<p style="font-weight: 600;font-size: 15px;">EDIFECS IS FULLY AUTOMATING PRIOR AUTHORIZATION FOR PAYERS AND PROVIDERS</p>
+													<ul>
+														<li>REDUCE costs associated with an inefficient prior authorization process</li>
+														<li>REMOVE provider abrasion through EHR integration</li>
+														<li>ENHANCE consumer experience and outcomes with a faster review process</li>
+														<li>COMPLY with evolving state and federal legislation</li>
+														<li>CONSOLIDATE vendors with a single end-to-end prior authorization solution</li>
+													</ul>
+												</div>
+											</div>
+											<div class="wp-block-column" style="flex-basis:50%">
+												<div class="roi_calculation_form--main roi_calculation---main_form--main">
+													<form action="#" method="" name="roi_calculation_form" id="roi_calculation_form">
+														<div class="form-group">
+															<h1>Calculate Your Savings</h1>
+															<label for="organization_type"><b>Is your organization a health plan or provider? (Please select the one that best represents your organization.)*</b></label>
+
+															<div><input type="radio" id="organization_type_health_plan" name="organization_type" value="Health plan" checked=""> Health plan</div>
+															<div><input type="radio" id="organization_type_provider" name="organization_type" value="Provider"> Provider</div>
+														</div>
+														<div class="health_plan_section">
+															<label for="number_of_prior_authorizations"><b>What is the size of your current member population?</b></label>
+															<!-- <input type="number" class="form-control" id="number_of_prior_authorizations" name="number_of_prior_authorizations" value="" required=""> -->
+															<select class="form-control" id="number_of_prior_authorizations" name="number_of_prior_authorizations" required>
+																<option value=''>Select</option>
+																<option value="75000">50,000 to 100,000</option>
+																<option value="20000">100,000 to 300,000</option>
+																<option value="400000">300,000 to 500,000</option>
+																<option value="750000">500,000 to 1M</option>
+																<option value="2000000">1M to 3M</option>
+																<option value="4000000">3M to 5M</option>
+																<option value="5000000">Greater then 5M</option>
+															</select>
+															<br>
+															<label for="average_time"><b>What is the average time it takes to provide a decision for complex cases?</b></label>
+															<select class="form-control" id="average_time" name="average_time">
+																<option value=''>Select</option>
+																<option>1-3 days</option>
+																<option>3-6 days</option>
+																<option>6-10 days</option>
+																<option>More than 10 days</option>
+															</select>
+															<br>
+															<label for="procedure_types"><b>What are your top three procedure types by volume?</b></label>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Advanced Radiology (MRI, CT, etc)">Advanced Radiology (MRI, CT, etc)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Durable Medical Equipment">Durable Medical Equipment
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Physician-Administered Specialty Drugs">Physician-Administered Specialty Drugs
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Surgery">Surgery
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Genetic Testing">Genetic Testing
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Musculoskeletal (Knee/Hip/Spine)">Musculoskeletal (Knee/Hip/Spine)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Therapies (Physical/Occupational/Speech)">Therapies (Physical/Occupational/Speech)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Behavioral Health">Behavioral Health
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Long Term Support Services">Long Term Support Services
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Oncology">Oncology
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types[]" value="Other" id="hc-check">Other
+															</div>
+															<input type="text" class="form-control" id="procedure_types_others" name="procedure_types_others" value="" style="display: none;">
+															<br>
+															<div class="form-group">
+																<label for="percent_of_prior_authorizations"><b>What percent of your prior authorizations are outsourced to a vendor?</b></label>
+
+																<div>
+																	<input type="radio" id="percent_of_prior_authorizations_less_than_50" name="percent_of_prior_authorizations" value="Less than 50%"> Less than 50%
+																</div>
+																<div>
+																	<input type="radio" id="percent_of_prior_authorizationsmore_than_50" name="percent_of_prior_authorizations" value="More than 50%"> More than 50%
+																</div>
+
+															</div>
+															<label for="have_management"><b>Do you have a Utilization Management/Care Management system capable of managing human workflow for the Prior Authorization case review?</b></label>
+															<div>
+																	<input type="radio" id="have_management_yes" name="have_management" value="Less than 50%"> Yes
+																</div>
+																<div>
+																	<input type="radio" id="have_management_no" name="have_management" value="More than 50%"> No
+																</div>
+														</div>
+														<div class="provider_section">
+															<label for="number_of_prior_authorizations_provider"><b>How many Prior Authorizations do you submit per year? (We&#8217;ll need this information to calculate your estimated costs.)* </b></label>
+															<input type="number" class="form-control" id="number_of_prior_authorizations_provider" name="number_of_prior_authorizations_provider" value="" required="">
+															<br>
+															<label for="average_time_provider"><b>What is the average time it takes to receive the decision for the complex cases?   </b></label>
+															<select class="form-control" id="average_time_provider">
+																<option>1-3 days</option>
+																<option>3-6 days</option>
+																<option>6-10 days</option>
+																<option>More than 10 days</option>
+															</select>
+															<br>
+															<label for="procedure_types_provider"><b>What are your top three procedure types by volume? (Please select your top three from the following.) </b></label>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Advanced Radiology (MRI, CT, etc)">Advanced Radiology (MRI, CT, etc)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Durable Medical Equipment">Durable Medical Equipment
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Physician-Administered Specialty Drugs">Physician-Administered Specialty Drugs
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Surgery">Surgery
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Genetic Testing">Genetic Testing
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Musculoskeletal (Knee/Hip/Spine)">Musculoskeletal (Knee/Hip/Spine)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Therapies (Physical/Occupational/Speech)">Therapies (Physical/Occupational/Speech)
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Behavioral Health">Behavioral Health
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Long Term Support Services">Long Term Support Services
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Oncology">Oncology
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" name="procedure_types_provider[]" value="Other" id="prov-other">Other
+															</div>
+															<input type="text" class="form-control" id="procedure_types_provider" name="procedure_types_provider" value="" style="display: none;">
+															<br>
+															<div class="form-group">
+																<label for="prior_authorizations_provider"><b>Do you use staffing services or manage prior authorization in house (scheduling department, clerical services, etc.)? <br>Please select from the following. </b></label>
+
+																<div><input type="radio" id="prior_authorizations_outsource_provider" name="prior_authorizations_provider" value="Outsource"> Outsource</div>
+																<div><input type="radio" id="prior_authorizations_in_house_provider" name="prior_authorizations_provider" value="In-House"> In-House</div>
+																<div><input type="radio" id="prior_authorizations_mixed_provider" name="prior_authorizations_provider" value="Mixed"> Mixed</div>
+
+															</div>
+															<div class="form-group">
+																<label for="ehr_emr_system_provider"><b>What EHR/EMR system do you use?</b></label>
+
+																<div><input type="radio" id="ehr_emr_system_epic_provider" name="ehr_emr_system_provider" value="Epic"> Epic</div>
+																<div><input type="radio" id="ehr_emr_system_cerner_provider" name="ehr_emr_system_provider" value="Cerner"> Cerner</div>
+																<div><input type="radio" id="ehr_emr_system_surescripts_provider" name="ehr_emr_system_provider" value="SureScripts"> SureScripts</div>
+																<div><input type="radio" id="ehr_emr_system_other_provider" name="ehr_emr_system_provider" value="Other"> Other</div>
+																<br />
+																<input type="text" class="form-control" id="ehr_emr_system_epic_provider_others" name="ehr_emr_system_epic_provider_others" value="" style="display: none;">
+															</div>
+														</div>
+														<input type="submit" value="Calculate Savings" class="calculate--savings">
+													</form>
+
+
+													<div class="roi_calculation_result" style="display: none;">
+														<h3>Estimated Savings per year: $<span class="roi_output"></span></h3>
+														<a href="#" class="calculate-another">Calculate another</a>
+														<p class="claculate--another--para">Savings are calculated based on industry averages, client research. and a
+														conversion rom a mostly manual environment to a mostly automated environment. Your total projected savings includes a reduction in human labor, and reduced infrastructure. Actual results will vary based on plan and provider environment.</p>
+													</div>
+												</div>
+
+
+
+											<div role="form" class="wpcf7" id="wpcf7-f7148-p7133-o1" lang="en-US" dir="ltr">
+												<form action="/automated-prior-authorization/#wpcf7-f7148-p7133-o1" method="post" class="wpcf7-form roi-calculator-know-more" novalidate="novalidate">
+													<div style="display: none;">
+														<input type="hidden" name="_wpcf7" value="7148" />
+														<input type="hidden" name="_wpcf7_version" value="5.0.5" />
+														<input type="hidden" name="_wpcf7_locale" value="en_US" />
+														<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f7148-p7133-o1" />
+														<input type="hidden" name="_wpcf7_container_post" value="7133" />
+													</div>
+
+													<div class="edifecs--top--form roi--calculator--form">
+														<h3>For more information on how to fully automate prior authorization, contact us today.</h3>
+														<div class="edifecs--form">
+															<label> Your Name*<br />
+																<span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> 
+															</label>
+															<label> Your Email*<br />
+																<span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> 
+															</label>
+															<label> Phone Number<br />
+																<span class="wpcf7-form-control-wrap phonenumber"><input type="number" name="phonenumber" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" min="0" aria-required="true" aria-invalid="false" /></span> 
+															</label>
+
+															<p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+															</p>
+														</div>
+													</div>
+														<div class="wpcf7-response-output wpcf7-display-none"></div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</main><!-- #main -->
+				</div><!-- #primary -->
+			</div>
+
+
+
+
+
+	<script type='text/javascript' src='js/bootstrap.js'></script>
+	<script type='text/javascript' src='js/custom.js'></script>
+
+
+</body>
+</html>
